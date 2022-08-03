@@ -1,0 +1,74 @@
+.game-card
+    position: relative
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 2px
+    background: var(--main-dark-color)
+    transform-style: preserve-3d
+    transition: .6s
+    box-shadow: 0 0 6px var(--blue-active-color)
+    user-select: none
+
+    &--open, &--found
+        transform: rotateY(180deg)
+
+    &--found
+        background: var(--blue-active-color)
+        animation: cardHide 1s linear both
+        animation-delay: .6s
+
+        & .game-card__back
+            background: none
+
+            &__text
+                opacity: 0
+
+    &__fron, &__back
+        position: absolute
+        top: 0
+        left: 0
+        backface-visibility: hidden
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        user-select: none
+
+    & img
+        width: 100px
+        height: 100px
+        object-fit: cover
+        border-radius: 50%
+        box-shadow: 0 0 7px var(--blue-active-color)
+        pointer-events: none
+
+    &__front
+        transform: rotateY(-180deg)
+
+    &__back
+        transform: rotateX(0)
+        background: var(--main-dark-color)
+
+        &__text
+            color: var(--blue-active-color)
+
+
+@media screen and ( max-width: 600px )
+    .game-card
+        &__back
+            &__text
+                font-size: var(--fs-4)
+
+
+@keyframes cardHide
+    0%
+        transform: rotateY(180deg) translateY(0)  rotateX(0) 
+        opacity: 1
+    100%
+        transform: rotateY(200deg) translateY(100%)  rotateX(540deg)
+        opacity: 0

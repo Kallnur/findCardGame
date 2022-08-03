@@ -1,0 +1,34 @@
+.leaderboard
+    width: 50%
+
+    &__body
+        width: 80%
+
+    &__title
+        font-size: var(--fs-2)
+        margin-bottom: 40px
+        text-align: center
+
+    &__list
+        margin-bottom: 60px
+
+    &__selects
+        display: flex
+        margin: 20px 0 40px
+        justify-content: space-evenly
+
+    &__select
+        display: flex
+        align-items: center
+        margin: 15px 0
+        gap: 15px
+
+@media screen and (max-width: 1024px) 
+    .leaderboard
+        width: 90%
+
+@media screen and (max-width: 768px) 
+    .leaderboard
+        &__selects
+            flex-direction: column
+            align-items: flex-end

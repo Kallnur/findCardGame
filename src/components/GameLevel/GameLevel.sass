@@ -1,0 +1,28 @@
+@import '../../styles/config/mixin'
+
+.game-level-block
+
+    &__title
+        text-align: center
+        margin-bottom: 50px
+        font-size: var(--fs-2)
+        letter-spacing: 1px
+
+    &__list
+        +flex(row, center, center)
+        gap: 15px
+        margin-bottom: 60px
+
+    & .form-button
+        text-align: center
+
+        & button 
+            width: 50%
+            font-size: var(--fs-3)
+
+
+@media screen and (max-width: 500px)
+    .game-level-block
+
+        & .form-button button 
+            width: 70%

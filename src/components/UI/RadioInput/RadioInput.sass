@@ -1,0 +1,40 @@
+.radio-input-block
+    position: relative
+    width: 31%
+    text-align: center
+
+    & > input 
+        display: none
+
+        &:focus 
+            box-shadow: 0 0 5px var(--blue-active-color)
+
+        &:checked + label
+            background: var(--blue-active-color)
+            color: var(--white-color)
+
+    & > label 
+        padding: 20px 30px
+        box-shadow: 0 0 3px var(--blue-active-color)
+        cursor: pointer
+        transition: .3s
+        font-weight: 600
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-size: var(--fs-4)
+
+        &:hover 
+            box-shadow: 0 0 5px var(--blue-active-color)
+
+
+@media screen and (max-width: 650px)
+    .radio-input-block
+
+        & > label 
+            padding: 16px 20px
+
+@media screen and (max-width: 500px)
+    .radio-input-block
+
+        & > label 
+            white-space: nowrap

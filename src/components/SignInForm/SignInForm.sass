@@ -1,0 +1,13 @@
+@import ../../styles/config/mixin
+
+.sign-in
+    &__form-body
+        width: var(--form-width)
+        margin: 0 auto
+        +flex(column, center, center) 
+        gap: 20px
+
+
++mediaMaxW(425px)
+    .sign-in
+        width: 100%

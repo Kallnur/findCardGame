@@ -1,0 +1,63 @@
+.game-cards-list
+    width: 100%
+    display: flex 
+    flex-wrap: wrap
+    justify-content: center
+    gap: 10px
+    border-top: 2px solid var(--blue-active-color)
+    padding-top: 40px
+
+    &--1-lvl > li 
+        width: var(--card-width-1-lvl)
+        height: 120px
+
+    &--2-lvl > li 
+        width: var(--card-width-2-lvl)
+        height: 130px
+
+    &--3-lvl > li 
+        width: var(--card-width-3-lvl)
+        height: 140px
+
+        & img
+            width: 70px
+            height: 70px
+
+    &__item
+        perspective: 500px
+        text-align: center
+        cursor: pointer
+
+
+@media screen and (max-width: 768px)
+    .game-cards-list
+        &__item
+            & img
+                width: 70px
+                height: 70px
+
+@media screen and (max-width: 476px)
+    .game-cards-list
+        &--1-lvl > li 
+            height: 100px
+            & img
+                width: 45px
+                height: 45px
+
+        &--2-lvl > li 
+            height: 100px
+            & img
+                width: 45px
+                height: 45px
+
+        &--3-lvl > li 
+            height: 70px
+
+            & img
+                width: 45px
+                height: 45px
+
+        &__item
+            & img
+                width: 70px
+                height: 70px

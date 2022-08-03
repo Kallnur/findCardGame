@@ -1,0 +1,50 @@
+:root{
+    --fs-1: 2.5rem;
+    --fs-2: 2rem;
+    --fs-3: 1.2rem;
+    --fs-4: 1rem;
+
+    --form-width: 400px;
+    --modal-body-width: 50%;
+    --card-width-1-lvl: 23%;
+    --card-width-2-lvl: 19%;
+    --card-width-3-lvl: 15%;
+
+    --main-dark-color: #232323;
+    --white-color: #fff;
+    --blue-active-color: #61d7d2;
+    --danger-color: #FF0905;
+}
+
+@media screen and (max-width: 425px) {
+    :root{
+        --fs-1: 2rem;
+
+        --form-width: 90%;
+
+        /* --card-width-1-lvl: 22%;
+        --card-width-2-lvl: 17%;
+        --card-width-3-lvl: 13%; */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    :root{
+        --fs-3: 1rem;
+        --fs-4: .8rem;
+
+        --form-width: 90%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    :root{
+        --fs-2: 1.5rem;
+
+        --form-width: 90%;
+
+        --card-width-1-lvl: 22%;
+        /* --card-width-2-lvl: 18%;
+        --card-width-3-lvl: 14%; */
+    }
+}
